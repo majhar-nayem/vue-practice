@@ -47,9 +47,9 @@ export default {
           this.seletedTab = 'stored-resources';
       },
       deleteResource(resId){
-         const deleteResource = this.storedResources.filter( resource =>
-              resource.id === resId);
-        console.log(deleteResource.length);
+          const index = this.storedResources.findIndex(res => res.id == resId);
+         this.storedResources.splice(index, 1);
+        // console.log(deleteResource.length);
       }
   },
   computed : {
